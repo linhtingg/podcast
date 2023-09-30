@@ -19,13 +19,11 @@
 
             <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
                 <h6 class="site-footer-title mb-3">Contact</h6>
-
-                <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 010-020-0340</p>
-
                 <p>
-                    <strong class="d-inline me-2">Email:</strong>
-                    <a href="#">inquiry@pod.co</a>
+                    <p class="d-inline me-2">Shecodes 2023</p>
                 </p>
+                <p class="mb-2"><strong class="d-inline me-2">NGENE TEAM</strong></p>
+
             </div>
 
             <div class="col-lg-3 col-md-6 col-12">
@@ -93,9 +91,9 @@
             </div>
 
             <div class="col-lg-3 col-12">
-                <p class="copyright-text mb-0">Copyright © 2036 Talk Pod Company
+                <p class="copyright-text mb-0">
                     <br><br>
-                    Design: <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>
+                    Original Template Design: <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>
                 </p>
             </div>
         </div>

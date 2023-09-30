@@ -61,10 +61,10 @@ include('helper/config.php');
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="explore.php">Explore</a>
+                            <a class="nav-link" href="explore.php">Explore</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="continue.php">Continue</a>
+                            <a class="nav-link active" href="continue.php">Continue</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Create your own</a>
@@ -85,9 +85,7 @@ include('helper/config.php');
         <header class="site-header d-flex flex-column justify-content-center align-items-center">
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-12 col-12 text-center">
-
                         <h2 class="mb-0">Continue where your left off...</h2>
                     </div>
 
@@ -117,7 +115,7 @@ include('helper/config.php');
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
                                     <a href="detail-podcast.php" class="custom-block-image-wrap">
-                                        <img src="images/podcast/2.jpg"
+                                        <img src="images/podcast/<?php echo ($result->podcastid)?>.jpg"
                                             class="custom-block-image img-fluid" alt="">
 
                                         <a href="#" class="custom-block-icon">

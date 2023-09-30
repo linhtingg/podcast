@@ -337,7 +337,7 @@ include('helper/config.php');
         <!-- End of Hot topic section -->
 
         <!-- Trending podcast section -->
-        <section class="trending-podcast-section section-padding">
+        <section class="trending-podcast-section section-padding pt-0">
             <div class="container">
                 <div class="row">
 
@@ -347,18 +347,11 @@ include('helper/config.php');
                         </div>
                     </div>
 
-                    <?php $sql = "SELECT * From podcast where trending =1 limit 2;";
-                    $query = $dbh->prepare($sql);
-                    $query->execute();
-                    $results = $query->fetchAll(PDO::FETCH_OBJ);
-                    $cnt = 1;
-                    if ($query->rowCount() > 0) {
-                        foreach ($results as $result) { ?>
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
                                 <a href="detail-podcast.php">
-                                    <img src="images/podcast/23.jpg" class="custom-block-image img-fluid"
+                                    <img src="images/podcast/1.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
                             </div>
@@ -366,11 +359,20 @@ include('helper/config.php');
                             <div class="custom-block-info">
                                 <h5 class="mb-2">
                                     <a href="detail-podcast.php">
-                                        <?php echo htmlentities($result->name)?>
+                                        Vintage Show
                                     </a>
                                 </h5>
 
-                                <p class="mb-0"><?php echo htmlentities($result->topic)?></p>
+                                <div class="profile-block d-flex">
+                                    <img src="images/profile/lyly-portrait.jpg"
+                                        class="profile-block-image img-fluid" alt="">
+
+                                    <p>Elsa
+                                        <strong>Influencer</strong>
+                                    </p>
+                                </div>
+
+                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
 
                                 <div class="custom-block-bottom d-flex justify-content-between mt-3">
                                     <a href="#" class="bi-headphones me-1">
@@ -387,9 +389,127 @@ include('helper/config.php');
                                 </div>
                             </div>
 
-                            <?php $cnt = $cnt + 1;
-                        }
-                     } ?>
+                            <div class="social-share d-flex flex-column ms-auto">
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-heart"></i>
+                                </a>
+
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-bookmark"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block custom-block-full">
+                            <div class="custom-block-image-wrap">
+                                <a href="detail-podcast.php">
+                                    <img src="images/podcast/5.jpg" class="custom-block-image img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+
+                            <div class="custom-block-info">
+                                <h5 class="mb-2">
+                                    <a href="detail-podcast.php">
+                                        Environment Soil
+                                    </a>
+                                </h5>
+
+                                <div class="profile-block d-flex">
+                                    <img src="images/profile/lyly-portrait.jpg"
+                                        class="profile-block-image img-fluid" alt="">
+
+                                    <p>
+                                        Taylor
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                        <strong>Creator</strong>
+                                    </p>
+                                </div>
+
+                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                    <a href="#" class="bi-headphones me-1">
+                                        <span>100k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-heart me-1">
+                                        <span>2.5k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-chat me-1">
+                                        <span>924k</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="social-share d-flex flex-column ms-auto">
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-heart"></i>
+                                </a>
+
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-bookmark"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        <div class="custom-block custom-block-full">
+                            <div class="custom-block-image-wrap">
+                                <a href="detail-podcast.php">
+                                    <img src="images/podcast/4.jpg" class="custom-block-image img-fluid"
+                                        alt="">
+                                </a>
+                            </div>
+
+                            <div class="custom-block-info">
+                                <h5 class="mb-2">
+                                    <a href="detail-podcast.php">
+                                        Daily Talk
+                                    </a>
+                                </h5>
+
+                                <div class="profile-block d-flex">
+                                    <img src="images/profile/taylor-portrait.jpg"
+                                        class="profile-block-image img-fluid" alt="">
+
+                                    <p>
+                                        William
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                        <strong>Vlogger</strong>
+                                    </p>
+                                </div>
+
+                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+
+                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                    <a href="#" class="bi-headphones me-1">
+                                        <span>100k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-heart me-1">
+                                        <span>2.5k</span>
+                                    </a>
+
+                                    <a href="#" class="bi-chat me-1">
+                                        <span>924k</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="social-share d-flex flex-column ms-auto">
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-heart"></i>
+                                </a>
+
+                                <a href="#" class="badge ms-auto">
+                                    <i class="bi-bookmark"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 

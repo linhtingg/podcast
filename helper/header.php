@@ -45,7 +45,7 @@
             </ul>
 
             <div class="ms-4">
-                <a href="#section_2" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
+                <a href="signin.php" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
             </div>
         </div>
     </div>

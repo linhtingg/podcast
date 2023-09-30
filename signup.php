@@ -5,24 +5,23 @@ include('helper/config.php');
 if ($_SESSION['uname'] != '') {
     $_SESSION['uname'] = '';
 }
-if (isset($_POST['login'])) {
+if (isset($_POST['signup'])) {
     $username = $_POST['username'];
+    $fullname = $_POST['fullname'];
     $pass = $_POST['pass'];
-    $sql1 = "SELECT username,pass FROM user WHERE username=:username and pass=:pass";
-    $query = $dbh->prepare($sql1);
-    $query->bindParam(':username', $username, PDO::PARAM_STR);
-    $query->bindParam(':pass', $pass, PDO::PARAM_STR);
-    $query->execute();
-    $results = $query->fetchAll(PDO::FETCH_OBJ);
-    if ($query->rowCount() > 0) {
+    
+    $sql2 = "INSERT INTO user (username,fullname,pass) VALUES (:username,:fullname,:pass);";
+    $query2 = $dbh->prepare($sql2);
+    $query2->bindParam(':username', $username, PDO::PARAM_STR);
+    $query2->bindParam(':pass', $pass, PDO::PARAM_STR);
+    $query2->bindParam(':fullname', $fullname, PDO::PARAM_STR);
+
+    if ($query2->execute()) {
         $_SESSION['uname'] = $_POST['username'];
         echo "<script type='text/javascript'> document.location = 'explore.php'; </script>";
     } else {
         echo "<script>alert('Invalid Details');</script>";
     }
-}
-if (isset($_POST['signup'])) {
-    echo "<script type='text/javascript'> document.location = 'signup.php'; </script>";
 }
 ?>
 
@@ -96,7 +95,7 @@ https://templatemo.com/tm-584-pod-talk
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-12 text-center">
-                            <h2 class="mb-0">Sign in to your account</h2>
+                            <h2 class="mb-0">We'd love to have you join</h2>
                         </div>
                     </div>
                 </div>
@@ -110,24 +109,31 @@ https://templatemo.com/tm-584-pod-talk
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-floating">
-                                            <input type="text" name="username" id="username" class="form-control" placeholder="User Name" >
-                                            <label for="floatingInput">User Name</label>
+                                            <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Full Name" required="">
+                                            <label for="floatingInput">Full Name</label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12"> 
                                         <div class="form-floating">
+                                            <input type="text" name="username" id="username" class="form-control" placeholder="Chose an username" required="">
+                                            <label for="floatingInput">User Name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-12">
+                                        <div class="form-floating">
                                             <input type="password" name="pass" id="pass" class="form-control" placeholder="Enter your password" required="">
                                             <label for="floatingInput">Password</label>
                                         </div>
+                                        <div class="form-floating">
+                                            <input type="password" name="rpass" id="rpass" class="form-control" placeholder="Confirm your password" required="">
+                                            <label for="floatingInput">Confirm Password</label>
+                                        </div>
                                     </div>
                                     
-                                    <div class="col-lg-6 col-12">
-                                        <button type="submit" name="signup" class="form-control" style="background-color: rgb(230, 245, 255); color: rgb(0, 102, 255)">Without an account?</button>
-                                    </div>
-
                                     <div class="col-lg-4 col-12 ms-auto">
-                                        <button type="submit" name="login" class="form-control">Login</button>
+                                        <button type="submit" name="signup" class="form-control">Sign up</button>
                                     </div>
 
                                 </div>

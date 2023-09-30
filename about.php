@@ -100,17 +100,13 @@ include('helper/config.php');
                     <div class="col-lg-8 col-12 mx-auto">
                         <div class="pb-5 mb-5">
                             <div class="section-title-wrap mb-4">
-                                <h4 class="section-title">Our story</h4>
+                                <h4 class="section-title">Advocate for the environment</h4>
                             </div>
 
-                            <p>Advocate for the environment</p>
-                            Social audio platform gives you access to thousands environmentally oriented podcasts  and other content from creators all over the world
-
-                            Together, we develop a better environment by spreading the power of unition</p>
-
-                            <p>You are not allowed to redistribute the downloadable template ZIP file on any other
-                                website without a permission. Please contact TemplateMo website for further information.
-                                Thank you.</p>
+                            <p>With a strong interest in environmental concerns,</p>
+                            <p>The <strong>NGENE |en·gine|</strong> team launched <strong style= "background-color: rgb(230, 245, 255);">Nghe nè!</strong> -  
+                            a podcast-sharing platform, to inspire the passion of individuals for the environment. </p>
+                            <p>Via an innovative approach using 3DIO sound effects and to provide accessibility to environmental protection campaigns throughout the world.</p>
 
                             <img src="images/medium-shot-young-people-recording-podcast.jpg"
                                 class="about-image mt-5 img-fluid" alt="">

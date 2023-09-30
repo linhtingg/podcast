@@ -36,14 +36,6 @@ include('helper/config.php');
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
     <link href="css/templatemo-pod-talk.css" rel="stylesheet">
-
-    <!--
-
-TemplateMo 584 Pod Talk
-
-https://templatemo.com/tm-584-pod-talk
-
--->
 </head>
 
 <body>
@@ -75,17 +67,22 @@ https://templatemo.com/tm-584-pod-talk
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="explore.php">explore</a>
+                            <a class="nav-link active" href="explore.php">Explore</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php">About</a>
+                            <a class="nav-link" href="continue.php">Continue</a>
                         </li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Create your own</a>
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="create-podcast.php">Podcast</a></li>
+                                <li><a class="dropdown-item active" href="create-campaign.php">Campaign</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
-                    <div class="ms-4">
-                        <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
+                    <div class="ms-4 dropdown">
+                        <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">My Account</a>
                     </div>
                 </div>
             </div>
@@ -98,11 +95,12 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-12 col-12">
                         <div class="text-center mb-5 pb-2">
-                            <h1 class="text-white">Listen to all the talks</h1>
+                            <h3 class="text-white">Customized podcasts</h3>
+                            <h1 class="text-white">JUST FOR YOU!</h1>
 
-                            <p class="text-white"><b>Nghe nè!</b> is everywhere. Every sound remind you of us.</p>
+                            <p class="text-white">Listen everywhere. Every sound remind us of you</p>
 
-                            <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start listening</a>
+                            <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start your day</a>
                         </div>
 
                         <!-- Trending creators -->
@@ -115,14 +113,14 @@ https://templatemo.com/tm-584-pod-talk
                             if ($query->rowCount() > 0) {
                                 foreach ($results as $result) { ?>
                                     <div class="owl-carousel-info-wrap item">
-                                        <img src="images/profile/<?php echo $result->username;?>-portrait.jpg"
-                                            class="owl-carousel-image img-fluid" alt="">
+                                        <img src="images/profile/<?php echo $result->username;?>-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
                                         <div class="owl-carousel-info">
                                             <h4 class="mb-2">
-                                                <?php echo htmlentities($result->username)?>
+                                                <a style="color:black" href="detail-user.php?uname=<?php echo($result->username)?>">
+                                                <?php echo htmlentities($result->username)?></a>
                                                 <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
                                             </h4>
-                                            <span class="badge">Verified Podcaster</span>
+                                            <span class="badge">Following</span>
                                         </div>
                                         <div class="social-share">
                                             <ul class="social-icon">
@@ -153,7 +151,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Lastest podcasts</h4>
+                            <h4 class="section-title">From your beloved creator</h4>
                         </div>
                     </div>
 
@@ -169,7 +167,7 @@ https://templatemo.com/tm-584-pod-talk
                             <div class="">
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
-                                    <a href="detail-page.php" class="custom-block-image-wrap">
+                                    <a href="detail-podcast.php" class="custom-block-image-wrap">
                                         <img src="images/podcast/<?php echo $result->podcastid;?>.jpg"
                                             class="custom-block-image img-fluid" alt="">
                                         <a href="#" class="custom-block-icon">
@@ -179,8 +177,8 @@ https://templatemo.com/tm-584-pod-talk
                                 </div>
 
                                 <div class="mt-2">
-                                    <a href="#" class="btn custom-btn">
-                                        Subscribe
+                                    <a href="#" class="btn custom-btn" style="background-color: #00cc99; color: white">
+                                        <?php echo htmlentities($result->topic)?>
                                     </a>
                                 </div>
                             </div>
@@ -196,7 +194,7 @@ https://templatemo.com/tm-584-pod-talk
                                 </div>
 
                                 <h5 class="mb-2">
-                                    <a href="detail-page.php">
+                                    <a href="detail-podcast.php">
                                         <?php echo htmlentities($result->name)?>
                                     </a>
                                 </h5>
@@ -207,7 +205,7 @@ https://templatemo.com/tm-584-pod-talk
                                     <p>
                                         <?php echo htmlentities($result->username)?>
                                         <img src="images/verified.png" class="verified-image img-fluid" alt="">
-                                        <strong>Verified Podcaster</strong>
+                                        <strong>Following</strong>
                                     </p>
                                 </div>
 
@@ -264,7 +262,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/truck.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -283,7 +281,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/water.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -302,7 +300,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/ho.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -321,7 +319,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/sanho.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -364,7 +362,7 @@ https://templatemo.com/tm-584-pod-talk
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-page.php">
+                                <a href="detail-podcast.php">
                                     <img src="images/podcast/23.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
@@ -372,7 +370,7 @@ https://templatemo.com/tm-584-pod-talk
 
                             <div class="custom-block-info">
                                 <h5 class="mb-2">
-                                    <a href="detail-page.php">
+                                    <a href="detail-podcast.php">
                                      <?php echo htmlentities($result->name)?>
                                     </a>
                                 </h5>

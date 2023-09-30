@@ -34,7 +34,7 @@ if (isset($_POST['signup'])) {
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Pod Talk - Contact Page</title>
+        <title>NGHE NÈ! Advocate for the environment</title>
 
         <!-- CSS FILES -->        
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,13 +52,6 @@ if (isset($_POST['signup'])) {
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
         <link href="css/templatemo-pod-talk.css" rel="stylesheet">
-<!--
-
-TemplateMo 584 Pod Talk
-
-https://templatemo.com/tm-584-pod-talk
-
--->
     </head>
     
     <body>

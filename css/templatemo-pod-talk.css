@@ -1,11 +1,3 @@
-/*
-
-TemplateMo 584 Pod Talk
-
-https://templatemo.com/tm-584-pod-talk
-
-*/
-
 
 
 /*---------------------------------------
@@ -637,7 +629,7 @@ main {
   object-fit: cover;
 }
 
-.custom-block-image-detail-page .custom-block-image {
+.custom-block-image-detail-podcast .custom-block-image {
   width: 100%;
   height: 212px;
 }
@@ -809,7 +801,7 @@ main {
 }
 
 .profile-detail-block {
-  border: 1px solid #dee2e6;
+  border: 1px solid white;
   border-radius: var(--border-radius-large);
   padding: 25px 35px;
 }

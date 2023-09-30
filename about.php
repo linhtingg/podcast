@@ -16,7 +16,7 @@ include('helper/config.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pod Talk - About Page</title>
+    <title>NGHE NÈ! Advocate for the environment</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

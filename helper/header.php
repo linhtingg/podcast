@@ -35,7 +35,7 @@
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="listing-page.php">Listing Page</a></li>
 
-                        <li><a class="dropdown-item" href="detail-page.php">Detail Page</a></li>
+                        <li><a class="dropdown-item" href="detail-podcast.php">Detail Page</a></li>
                     </ul>
                 </li>
 

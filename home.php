@@ -37,13 +37,6 @@ include('helper/config.php');
 
     <link href="css/templatemo-pod-talk.css" rel="stylesheet">
 
-    <!--
-
-TemplateMo 584 Pod Talk
-
-https://templatemo.com/tm-584-pod-talk
-
--->
 </head>
 
 <body>
@@ -169,7 +162,7 @@ https://templatemo.com/tm-584-pod-talk
                             <div class="">
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
-                                    <a href="detail-page.php" class="custom-block-image-wrap">
+                                    <a href="detail-podcast.php" class="custom-block-image-wrap">
                                         <img src="images/podcast/<?php echo $result->podcastid;?>.jpg"
                                             class="custom-block-image img-fluid" alt="">
                                         <a href="#" class="custom-block-icon">
@@ -196,7 +189,7 @@ https://templatemo.com/tm-584-pod-talk
                                 </div>
 
                                 <h5 class="mb-2">
-                                    <a href="detail-page.php">
+                                    <a href="detail-podcast.php">
                                         <?php echo htmlentities($result->name)?>
                                     </a>
                                 </h5>
@@ -264,7 +257,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/truck.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -283,7 +276,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/water.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -302,7 +295,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/ho.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -321,7 +314,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-page.php" class="custom-block-image-wrap">
+                            <a href="detail-podcast.php" class="custom-block-image-wrap">
                                 <img src="images/topics/sanho.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
@@ -364,7 +357,7 @@ https://templatemo.com/tm-584-pod-talk
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-page.php">
+                                <a href="detail-podcast.php">
                                     <img src="images/podcast/23.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
@@ -372,8 +365,8 @@ https://templatemo.com/tm-584-pod-talk
 
                             <div class="custom-block-info">
                                 <h5 class="mb-2">
-                                    <a href="detail-page.php">
-                                     <?php echo htmlentities($result->name)?>
+                                    <a href="detail-podcast.php">
+                                        <?php echo htmlentities($result->name)?>
                                     </a>
                                 </h5>
 
@@ -396,7 +389,7 @@ https://templatemo.com/tm-584-pod-talk
 
                             <?php $cnt = $cnt + 1;
                         }
-                    } ?>
+                     } ?>
                         </div>
                     </div>
 

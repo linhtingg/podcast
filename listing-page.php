@@ -85,7 +85,7 @@ https://templatemo.com/tm-584-pod-talk
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact</a>
+                            <a class="nav-link" href="signin.php">Contact</a>
                         </li>
                     </ul>
 
@@ -117,7 +117,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Lastest episodes</h4>
+                            <h4 class="section-title">Lastest Podcasts</h4>
                         </div>
                     </div>
 
@@ -319,7 +319,7 @@ https://templatemo.com/tm-584-pod-talk
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Trending episodes</h4>
+                            <h4 class="section-title">Trending Podcasts</h4>
                         </div>
                     </div>
 

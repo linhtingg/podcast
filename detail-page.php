@@ -79,7 +79,7 @@ https://templatemo.com/tm-584-pod-talk
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.php">Contact</a>
+                                <a class="nav-link" href="signin.php">Contact</a>
                             </li>
                         </ul>
 
@@ -438,7 +438,7 @@ https://templatemo.com/tm-584-pod-talk
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Browse episodes</a>
+                                <a href="#" class="site-footer-link">Browse Podcasts</a>
                             </li>
 
                             <li class="site-footer-link-item">

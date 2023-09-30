@@ -79,7 +79,7 @@
                     </li>
 
                     <li class="site-footer-link-item">
-                        <a href="#" class="site-footer-link">Browse episodes</a>
+                        <a href="#" class="site-footer-link">Browse Podcasts</a>
                     </li>
 
                     <li class="site-footer-link-item">

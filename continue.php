@@ -123,7 +123,7 @@ foreach ($users as $user) {
 
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
-                                    <a href="detail-podcast.php" class="custom-block-image-wrap">
+                                    <a href="detail-podcast.php?pid=<?php echo ($result->podcastid)?>" class="custom-block-image-wrap">
                                         <img src="images/podcast/<?php echo ($result->podcastid)?>.jpg"
                                             class="custom-block-image img-fluid" alt="">
 

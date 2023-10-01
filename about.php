@@ -119,7 +119,7 @@ include('helper/config.php');
                         </div>
                     </div>
 
-                    <?php $sql = "SELECT * From user where trending =1";
+                    <?php $sql = "SELECT * From podcast_user limit 6";
                     $query = $dbh->prepare($sql);
                     $query->execute();
                     $results = $query->fetchAll(PDO::FETCH_OBJ);

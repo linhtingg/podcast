@@ -200,7 +200,7 @@ include('helper/config.php');
                                 </h5>
 
                                 <div class="profile-block d-flex">
-                                    <img src="images/profile/<?php echo $result->username;?>-portrait.jpg"
+                                    <img src="images/profile/<?php echo strtolower($result->username);?>-portrait.jpg"
                                         class="profile-block-image img-fluid" alt="">
                                     <p>
                                         <?php echo htmlentities($result->username)?>

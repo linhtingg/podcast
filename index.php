@@ -108,7 +108,7 @@ include('helper/config.php');
                             if ($query->rowCount() > 0) {
                                 foreach ($results as $result) { ?>
                                     <div class="owl-carousel-info-wrap item">
-                                        <img src="images/profile/<?php echo $result->username;?>-portrait.jpg"
+                                        <img src="images/profile/<?php echo strtolower($result->username);?>-portrait.jpg"
                                             class="owl-carousel-image img-fluid" alt="">
                                         <div class="owl-carousel-info">
                                             <h4 class="mb-2">
@@ -195,7 +195,7 @@ include('helper/config.php');
                                 </h5>
 
                                 <div class="profile-block d-flex">
-                                    <img src="images/profile/<?php echo $result->username;?>-portrait.jpg"
+                                    <img src="images/profile/<?php echo strtolower($result->username);?>-portrait.jpg"
                                         class="profile-block-image img-fluid" alt="">
                                     <p>
                                         <?php echo htmlentities($result->username)?>

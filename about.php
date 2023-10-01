@@ -128,7 +128,7 @@ include('helper/config.php');
                         foreach ($results as $result) { ?>
                             <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                                 <div class="team-thumb bg-white shadow-lg">
-                                    <img src="images/profile/<?php echo $result->username;?>-portrait.jpg" class="about-image img-fluid" alt="">
+                                    <img src="images/profile/<?php echo strtolower($result->username);?>-portrait.jpg" class="about-image img-fluid" alt="">
                                     <div class="team-info">
                                         <h4 class="mb-2">
                                             <?php echo htmlentities($result->username)?>

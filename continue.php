@@ -143,7 +143,7 @@ foreach ($users as $user) {
                                 </div>
 
                                 <h5 class="mb-2">
-                                    <a href="detail-podcast.php">
+                                    <a href="detail-podcast.php?pid=<?php echo ($result->podcastid)?>">
                                     <?php echo htmlentities($result->name)?>
                                     </a>
                                 </h5>

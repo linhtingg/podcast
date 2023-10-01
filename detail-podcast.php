@@ -181,14 +181,14 @@ if ($_GET['pid']) {
                         <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                             <div class="custom-block custom-block-full">
                                 <div class="custom-block-image-wrap">
-                                    <a href="detail-podcast.php">
+                                    <a href="#">
                                         <img src="images/campaign/<?php echo ($result->campaignid);?>.jpg" class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
 
                                 <div class="custom-block-info">
                                     <h5 class="mb-2">
-                                        <a href="detail-podcast.php">
+                                        <a href="#">
                                         <?php echo htmlentities($result->name);?>
                                         </a>
                                     </h5>

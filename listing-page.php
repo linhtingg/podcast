@@ -97,7 +97,7 @@
 
                     <div class="col-lg-12 col-12 text-center">
 
-                        <h2 class="mb-0">Listing Page</h2>
+                        <h2 class="mb-0">Topic Listing</h2>
                     </div>
 
                 </div>

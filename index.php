@@ -100,7 +100,7 @@ include('helper/config.php');
 
                         <!-- Trending creators -->
                         <div class="owl-carousel owl-theme">
-                            <?php $sql = "SELECT * From User where trending =1";
+                            <?php $sql = "SELECT * From user where trending =1";
                             $query = $dbh->prepare($sql);
                             $query->execute();
                             $results = $query->fetchAll(PDO::FETCH_OBJ);

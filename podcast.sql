@@ -205,7 +205,7 @@ CREATE TABLE `userfollow` (
 --
 DROP TABLE IF EXISTS `podcast_user`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `podcast_user`  AS SELECT `user`.`userid` AS `userid`, `user`.`username` AS `username`, `user`.`fullName` AS `fullName`, `user`.`pass` AS `pass`, `user`.`trending` AS `trending`, `podcastid` AS `podcastid`, `name` AS `name`, `description` AS `description`, `creator` AS `creator`, `topic` AS `topic`, `duration` AS `duration` FROM (`user` join `podcast`) WHERE `user`.`userid` = `creator` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`er322xgfar0w1ohi`@`x8autxobia7sgh74.cbetxkdyhwsb.us-east-1.rds.amazonaws.com` SQL SECURITY DEFINER VIEW `podcast_user`  AS SELECT `user`.`userid` AS `userid`, `user`.`username` AS `username`, `user`.`fullName` AS `fullName`, `user`.`pass` AS `pass`, `user`.`trending` AS `trending`, `podcastid` AS `podcastid`, `name` AS `name`, `description` AS `description`, `creator` AS `creator`, `topic` AS `topic`, `duration` AS `duration` FROM (`user` join `podcast`) WHERE `user`.`userid` = `creator` ;
 
 --
 -- Indexes for dumped tables

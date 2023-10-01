@@ -1,4 +1,5 @@
-# Welcome to "Nghe nè!" project, a podcast-sharing platform to inspire the passion of individuals for the environment launched by The NGENE |en·gine| team. This README file provides an overview of the project, its goals, and how to use our website.
+# Welcome to "Nghe nè!" project, 
+### A podcast-sharing platform to inspire the passion of individuals for the environment launched by The NGENE |en·gine| team. This README file provides an overview of the project, its goals, and how to use our website.
 
 ## Project Overview
 "Nghe nè!" is not just a podcast series; it's a platform designed to ignite environmental enthusiasm and action from listening to podcasts to participating in campaigns about the environment. Our approach, which involves using 3DIO sound effects, aims to provide an immersive and captivating listening experience, bringing the environment closer to you.

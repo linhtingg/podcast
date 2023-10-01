@@ -2,8 +2,8 @@
 session_start();
 error_reporting(0);
 include('helper/config.php');
-if (isset($_POST['upload'])) {
-    $podcastname = $_POST['podcastname'];
+if (isset($_POST['submit'])) {
+    $campaignname = $_POST['campaignname'];
     $description = $_POST['description'];
     $creator = $_SESSION['uname'];
 
@@ -14,9 +14,9 @@ if (isset($_POST['upload'])) {
     $users = $query->fetchAll(PDO::FETCH_OBJ);
     foreach ($users as $user) {
         $uid=$user->userid;
-        $sql1 = "INSERT INTO podcast (name,description,creator) VALUES (:podcastname,:description,:uid);";
+        $sql1 = "INSERT INTO campaign (name,description,creator) VALUES (:campaignname,:description,:uid);";
         $query1 = $dbh->prepare($sql1);
-        $query1->bindParam(':podcastname', $podcastname, PDO::PARAM_STR);
+        $query1->bindParam(':campaignname', $campaignname, PDO::PARAM_STR);
         $query1->bindParam(':description', $description, PDO::PARAM_STR);
         $query1->bindParam(':uid', $uid, PDO::PARAM_STR);
         if ($query1->execute()) {
@@ -68,7 +68,7 @@ if (isset($_POST['upload'])) {
 
                     <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
                         <div class="input-group input-group-lg">    
-                            <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast" aria-label="Search">
+                            <input name="search" type="search" class="form-control" id="search" placeholder="Search Campaign" aria-label="Search">
 
                             <button type="submit" class="form-control" id="submit">
                                 <i class="bi-search"></i>
@@ -91,8 +91,8 @@ if (isset($_POST['upload'])) {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Create your own</a>
                                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item active" href="create-podcast.php">Podcast</a></li>
                                     <li><a class="dropdown-item" href="create-campaign.php">Campaign</a></li>
+                                    <li><a class="dropdown-item active" href="create-campaign.php">Campaign</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -108,8 +108,8 @@ if (isset($_POST['upload'])) {
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-12 text-center">
-                            <h2 class="mb-0">Upload your audio file</h2>
-                            <p class="mb-0" style="color:white">Be the leading creator at <b>NGHE NÈ!</b></p>
+                            <h2 class="mb-0">Create your next campaign</h2>
+                            <p class="mb-0" style="color:white">Let's start building the movement for tomorrow!</p>
                         </div>
                     </div>
                 </div>
@@ -123,16 +123,15 @@ if (isset($_POST['upload'])) {
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-floating">
-                                            <input type="text" name="podcastname" id="podcastname" class="form-control" placeholder="Pick a title" required="">
-                                            <label for="floatingInput">Podcast's Title</label>
+                                            <input type="text" name="campaignname" id="campaignname" class="form-control" placeholder="Pick a title" required="">
+                                            <label for="floatingInput">Campaign's Title</label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6 col-12"> 
-                                        <div class="form-floating">
+                                            <label for="file"> <small>&nbsp&nbspGuarantee documents</small></label>
                                             <input type="file" name="file" id="file" class="form-control" 
-                                            accept="audio/mp3, audio/mpeg" style="border-style:none;">
-                                        </div>
+                                            accept="application/msword application/pdf image/*" style="border-style:none;">
                                     </div>
 
                                     <div class="col-lg-12 col-12">
@@ -143,7 +142,7 @@ if (isset($_POST['upload'])) {
                                     </div>
                                     
                                     <div class="col-lg-6 col-12 ms-auto">
-                                        <button type="submit" name="upload" class="form-control">Upload</button>
+                                        <button type="submit" name="submit" class="form-control">Submit</button>
                                     </div>
 
                                 </div>

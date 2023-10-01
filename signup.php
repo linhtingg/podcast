@@ -15,7 +15,6 @@ if (isset($_POST['signup'])) {
     $query2->bindParam(':username', $username, PDO::PARAM_STR);
     $query2->bindParam(':pass', $pass, PDO::PARAM_STR);
     $query2->bindParam(':fullname', $fullname, PDO::PARAM_STR);
-
     if ($query2->execute()) {
         $_SESSION['uname'] = $_POST['username'];
         echo "<script type='text/javascript'> document.location = 'explore.php'; </script>";

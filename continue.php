@@ -70,7 +70,7 @@ include('helper/config.php');
                             <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Create your own</a>
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                 <li><a class="dropdown-item" href="create-podcast.php">Podcast</a></li>
-                                <li><a class="dropdown-item active" href="create-campaign.php">Campaign</a></li>
+                                <li><a class="dropdown-item" href="create-campaign.php">Campaign</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -199,7 +199,7 @@ include('helper/config.php');
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Trending Podcasts</h4>
+                            <h4 class="section-title">In Progress Campaigns</h4>
                         </div>
                     </div>
 

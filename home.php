@@ -162,7 +162,7 @@ include('helper/config.php');
                             <div class="">
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
-                                    <a href="detail-podcast.php" class="custom-block-image-wrap">
+                                    <a href="signin.php" class="custom-block-image-wrap">
                                         <img src="images/podcast/<?php echo $result->podcastid;?>.jpg"
                                             class="custom-block-image img-fluid" alt="">
                                         <a href="#" class="custom-block-icon">
@@ -189,7 +189,7 @@ include('helper/config.php');
                                 </div>
 
                                 <h5 class="mb-2">
-                                    <a href="detail-podcast.php">
+                                    <a href="signin.php">
                                         <?php echo htmlentities($result->name)?>
                                     </a>
                                 </h5>
@@ -257,14 +257,14 @@ include('helper/config.php');
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-podcast.php" class="custom-block-image-wrap">
+                            <a href="signin.php" class="custom-block-image-wrap">
                                 <img src="images/topics/truck.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
 
                             <div class="custom-block-info custom-block-overlay-info">
                                 <h5 class="mb-1">
-                                    <a href="listing-page.php">
+                                    <a href="signin.php">
                                         Air pollution
                                     </a>
                                 </h5>
@@ -276,14 +276,14 @@ include('helper/config.php');
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-podcast.php" class="custom-block-image-wrap">
+                            <a href="signin.php" class="custom-block-image-wrap">
                                 <img src="images/topics/water.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
 
                             <div class="custom-block-info custom-block-overlay-info">
                                 <h5 class="mb-1">
-                                    <a href="listing-page.php">
+                                    <a href="signin.php">
                                         Water pollution
                                     </a>
                                 </h5>
@@ -295,14 +295,14 @@ include('helper/config.php');
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-podcast.php" class="custom-block-image-wrap">
+                            <a href="signin.php" class="custom-block-image-wrap">
                                 <img src="images/topics/ho.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
 
                             <div class="custom-block-info custom-block-overlay-info">
                                 <h5 class="mb-1">
-                                    <a href="listing-page.php">
+                                    <a href="signin.php">
                                         Biodiversity loss
                                     </a>
                                 </h5>
@@ -314,14 +314,14 @@ include('helper/config.php');
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-overlay">
-                            <a href="detail-podcast.php" class="custom-block-image-wrap">
+                            <a href="signin.php" class="custom-block-image-wrap">
                                 <img src="images/topics/sanho.jpg"
                                     class="custom-block-image img-fluid" alt="">
                             </a>
 
                             <div class="custom-block-info custom-block-overlay-info">
                                 <h5 class="mb-1">
-                                    <a href="listing-page.php">
+                                    <a href="signin.php">
                                         Natural resource
                                     </a>
                                 </h5>
@@ -350,7 +350,7 @@ include('helper/config.php');
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-podcast.php">
+                                <a href="signin.php">
                                     <img src="images/podcast/1.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
@@ -358,7 +358,7 @@ include('helper/config.php');
 
                             <div class="custom-block-info">
                                 <h5 class="mb-2">
-                                    <a href="detail-podcast.php">
+                                    <a href="signin.php">
                                         Vintage Show
                                     </a>
                                 </h5>
@@ -404,7 +404,7 @@ include('helper/config.php');
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-podcast.php">
+                                <a href="signin.php">
                                     <img src="images/podcast/5.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
@@ -412,7 +412,7 @@ include('helper/config.php');
 
                             <div class="custom-block-info">
                                 <h5 class="mb-2">
-                                    <a href="detail-podcast.php">
+                                    <a href="signin.php">
                                         Environment Soil
                                     </a>
                                 </h5>
@@ -460,7 +460,7 @@ include('helper/config.php');
                     <div class="col-lg-4 col-12">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-podcast.php">
+                                <a href="signin.php">
                                     <img src="images/podcast/4.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
@@ -468,7 +468,7 @@ include('helper/config.php');
 
                             <div class="custom-block-info">
                                 <h5 class="mb-2">
-                                    <a href="detail-podcast.php">
+                                    <a href="signin.php">
                                         Daily Talk
                                     </a>
                                 </h5>

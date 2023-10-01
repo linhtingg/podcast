@@ -150,7 +150,9 @@ include('helper/config.php');
                         </div>
                     </div>
 
-                    <?php $sql = "SELECT * From podcast_user order by podcastid DESC limit 2;";
+                    <?php $sql = "SELECT * FROM podcast join user
+                                on user.userid = podcast.creator
+                                order by podcastid DESC limit 2";
                     $query = $dbh->prepare($sql);
                     $query->execute();
                     $results = $query->fetchAll(PDO::FETCH_OBJ);

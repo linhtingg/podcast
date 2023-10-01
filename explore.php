@@ -2,8 +2,10 @@
 session_start();
 error_reporting(0);
 include('helper/config.php');
-// if ($_GET['stid']) {
-//     $stid = $_GET['stid'];
+if ($_SESSION['uname'] == '') {
+    echo "<script>alert('Please sign in to your account');</script>";
+    echo "<script type='text/javascript'> document.location = 'signin.php'; </script>";
+} else {
 ?>
 
 <!doctype html>
@@ -113,7 +115,7 @@ include('helper/config.php');
                             if ($query->rowCount() > 0) {
                                 foreach ($results as $result) { ?>
                                     <div class="owl-carousel-info-wrap item">
-                                        <img src="images/profile/<?php echo $result->username;?>-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
+                                        <img src="images/profile/<?php echo strtolower($result->username);?>-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
                                         <div class="owl-carousel-info">
                                             <h4 class="mb-2">
                                                 <a style="color:black" href="detail-user.php?uname=<?php echo($result->username)?>">
@@ -167,10 +169,10 @@ include('helper/config.php');
                             <div class="">
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
-                                    <a href="detail-podcast.php" class="custom-block-image-wrap">
+                                    <a href="detail-podcast.php?pid=<?php echo $result->podcastid;?>" class="custom-block-image-wrap">
                                         <img src="images/podcast/<?php echo $result->podcastid;?>.jpg"
                                             class="custom-block-image img-fluid" alt="">
-                                        <a href="#" class="custom-block-icon">
+                                            <a href="detail-podcast.php?pid=<?php echo $result->podcastid;?>" class="custom-block-icon">
                                             <i class="bi-play-fill"></i>
                                         </a>
                                     </a>
@@ -534,6 +536,4 @@ include('helper/config.php');
 </body>
 
 </html>
-<?php
-// }
-?>
+<?php } ?>

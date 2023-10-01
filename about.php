@@ -136,7 +136,6 @@ include('helper/config.php');
                                         </h4>
                     
                                         <span class="badge">Verifed creator</span>
-                                        <!-- <span class="badge">Animal</span> -->
                                     </div>
                     
                                     <div class="social-share">

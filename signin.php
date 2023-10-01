@@ -111,7 +111,7 @@ if (isset($_POST['signup'])) {
 
                                     <div class="col-lg-6 col-md-6 col-12"> 
                                         <div class="form-floating">
-                                            <input type="password" name="pass" id="pass" class="form-control" placeholder="Enter your password" required="">
+                                            <input type="password" name="pass" id="pass" class="form-control" placeholder="Enter your password">
                                             <label for="floatingInput">Password</label>
                                         </div>
                                     </div>

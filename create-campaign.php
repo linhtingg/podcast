@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Create your own</a>
                                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="create-campaign.php">Campaign</a></li>
+                                    <li><a class="dropdown-item" href="create-campaign.php">Podcast</a></li>
                                     <li><a class="dropdown-item active" href="create-campaign.php">Campaign</a></li>
                                 </ul>
                             </li>

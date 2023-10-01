@@ -2,15 +2,18 @@
 session_start();
 error_reporting(0);
 include('helper/config.php');
-
-$creator = $_SESSION['uname'];
-$sql = "SELECT userid FROM user WHERE username=:creator;";
-$query = $dbh->prepare($sql);
-$query->bindParam(':creator', $creator, PDO::PARAM_STR);
-$query->execute();
-$users = $query->fetchAll(PDO::FETCH_OBJ);
-foreach ($users as $user) {
-    $uid=$user->userid;
+if ($_SESSION['uname'] == '') {
+    echo "<script>alert('Please sign in to your account');</script>";
+    echo "<script type='text/javascript'> document.location = 'signin.php'; </script>";
+} else {
+    $creator = $_SESSION['uname'];
+    $sql = "SELECT userid FROM user WHERE username=:creator;";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':creator', $creator, PDO::PARAM_STR);
+    $query->execute();
+    $users = $query->fetchAll(PDO::FETCH_OBJ);
+    foreach ($users as $user) {
+        $uid=$user->userid;
 ?>
 
 <!doctype html>
@@ -395,4 +398,4 @@ foreach ($users as $user) {
 
 </body>
 </html>
-<?php }?>
+<?php }}?>

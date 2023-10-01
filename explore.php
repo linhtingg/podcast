@@ -355,7 +355,7 @@ include('helper/config.php');
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-podcast.php">
+                                <a href="detail-podcast.php?pid=1">
                                     <img src="images/podcast/1.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
@@ -409,7 +409,7 @@ include('helper/config.php');
                     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-podcast.php">
+                                <a href="detail-podcast.php?pid=4">
                                     <img src="images/podcast/4.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>
@@ -465,7 +465,7 @@ include('helper/config.php');
                     <div class="col-lg-4 col-12">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
-                                <a href="detail-podcast.php">
+                                <a href="detail-podcast.php?pid=3">
                                     <img src="images/podcast/3.jpg" class="custom-block-image img-fluid"
                                         alt="">
                                 </a>

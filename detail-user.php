@@ -44,7 +44,7 @@ if ($_GET['uname']) {
         <main>
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand me-lg-5 me-0" href="index.php">
+                    <a class="navbar-brand me-lg-5 me-0" href="explore.php">
                         <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
                     </a>
 
@@ -447,7 +447,7 @@ if ($_GET['uname']) {
                 <div class="row align-items-center">
 
                     <div class="col-lg-2 col-md-3 col-12">
-                        <a class="navbar-brand" href="index.php">
+                        <a class="navbar-brand" href="explore.php">
                             <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
                         </a>
                     </div>

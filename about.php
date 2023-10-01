@@ -119,7 +119,7 @@ include('helper/config.php');
                         </div>
                     </div>
 
-                    <?php $sql = "SELECT * From podcast_user limit 6";
+                    <?php $sql = "SELECT * From podcast_user order by podcastid DESC limit 6;";
                     $query = $dbh->prepare($sql);
                     $query->execute();
                     $results = $query->fetchAll(PDO::FETCH_OBJ);

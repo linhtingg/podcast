@@ -43,7 +43,7 @@ include('helper/config.php');
         <!-- Header bar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand me-lg-5 me-0" href="home.php">
+                <a class="navbar-brand me-lg-5 me-0" href="index.php">
                     <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
                 </a>
                 <!-- Search bar -->
@@ -66,7 +66,7 @@ include('helper/config.php');
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="home.php">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
 
                         <li class="nav-item">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 30, 2023 at 05:41 PM
+-- Generation Time: Oct 01, 2023 at 02:59 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -40,7 +40,9 @@ CREATE TABLE `campaign` (
 --
 
 INSERT INTO `campaign` (`campaignid`, `name`, `description`, `creator`, `duration`) VALUES
-(2, 'White rhinos preservation', 'The tools developed by Colossal might be instrumental in the pursuit to rewild a healthy northern white rhino population.\r\n“We want to save a keystone species, which played a very crucial role in a complex ecosystem in Central Africa.”', 1, 0);
+(1, 'Unfiltered Spotlight on Conservation', 'Reframing the way we discuss learning to dive for the first part of September, encouraging divers to get their PADI in order to help save the ocean', 15, NULL),
+(2, 'White rhinos preservation', 'The tools developed by Colossal might be instrumental in the pursuit to rewild a healthy northern white rhino population.\r\n“We want to save a keystone species, which played a very crucial role in a complex ecosystem in Central Africa.”', 1, 0),
+(8, 'FareShare', 'Raising funds to deliver food during a time of national crisis. ', 20, NULL);
 
 -- --------------------------------------------------------
 
@@ -53,6 +55,23 @@ CREATE TABLE `campaignfollow` (
   `campaignid` int(11) DEFAULT NULL,
   `userid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `campaignfollow`
+--
+
+INSERT INTO `campaignfollow` (`id`, `campaignid`, `userid`) VALUES
+(1, 1, 15),
+(2, 1, 13),
+(3, 1, 1),
+(4, 1, 2),
+(5, 1, 3),
+(6, 1, 6),
+(7, 8, 20),
+(8, 8, 13),
+(9, 8, 14),
+(10, 8, 3),
+(11, 8, 6);
 
 -- --------------------------------------------------------
 
@@ -80,7 +99,10 @@ INSERT INTO `podcast` (`podcastid`, `name`, `description`, `creator`, `topic`, `
 (3, 'The Sustainable Plate: Food for Thought', 'The Sustainable Plate delves into sustainable food choices and their impact on the environment. Listen to discussions about sustainable agriculture, ethical eating, and reducing food waste.', 4, 'Food', 15, 1),
 (4, 'Wildlife Chronicles: Nature\'s Untold Stories', 'Listen to Wildlife Chronicles as we uncover the fascinating stories of animals, ecosystems, and conservation efforts worldwide. Explore the beauty and diversity of our natural world.', 5, 'Animal', 10, 0),
 (5, 'PlanetProtectors: Guardians of the Earth', 'PlanetProtectors is your guide to understanding and taking action on pressing environmental issues. Dive into informative discussions and interviews with experts', 4, 'Earth', 15, 1),
-(6, 'Ocean Odyssey: Beneath the Surface', 'Dive into the mysteries of the deep blue with Ocean Odyssey. Explore marine life, ocean conservation, and the critical role our oceans play in the health of our planet.', 5, 'Occean', 10, 0);
+(6, 'Ocean Odyssey: Beneath the Surface', 'Dive into the mysteries of the deep blue with Ocean Odyssey. Explore marine life, ocean conservation, and the critical role our oceans play in the health of our planet.', 5, 'Occean', 10, 0),
+(7, '6 mass extinctions in 440 Million Years', '6 mass extinctions in 440 Million Years', 20, NULL, 8, NULL),
+(8, '6 mass extinctions in 440 Million Years', '6 mass extinctions in 440 Million Years', 20, NULL, NULL, NULL),
+(9, '6 mass extinctions in 440 Million Years', 'Raising funds to deliver food during a time of national crisis. ', 20, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -105,6 +127,15 @@ CREATE TABLE `podcast_campain` (
   `podcastid` int(11) NOT NULL,
   `campainid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `podcast_campain`
+--
+
+INSERT INTO `podcast_campain` (`id`, `podcastid`, `campainid`) VALUES
+(1, 6, 1),
+(2, 5, 1),
+(3, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -151,13 +182,9 @@ INSERT INTO `user` (`userid`, `username`, `fullName`, `pass`, `trending`) VALUES
 (4, 'Mai', 'Đỗ Lê Quỳnh Mai', '123456', 1),
 (5, 'Taylor', 'Taylor Lautner', '123456', 1),
 (6, 'Lisa', 'Lisa Simpson', '123456', 1),
-(13, 'se', 'Selena Gomez', '123456', NULL),
+(13, 'Selena', 'Selena Gomez', '123456', NULL),
 (14, 'Hailey', 'Hailey Beiber', '123456', NULL),
-(15, 'Hailey', 'Hailey Beiber', '123456', NULL),
-(16, 'ha', 'Hailey Beiber', '123456', NULL),
-(17, 'ddd', 'Selena Gomez', '123456', NULL),
-(18, 'aaa', 'Hailey Beiber', '123456', NULL),
-(19, 'aaaaa', 'Hoàng Mai Thùy Linh', '123456', NULL);
+(20, 'Lavender', 'Lavender Haze', '123456', NULL);
 
 -- --------------------------------------------------------
 
@@ -218,7 +245,8 @@ ALTER TABLE `podcast_campain`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`userid`);
+  ADD PRIMARY KEY (`userid`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `userfollow`
@@ -234,19 +262,19 @@ ALTER TABLE `userfollow`
 -- AUTO_INCREMENT for table `campaign`
 --
 ALTER TABLE `campaign`
-  MODIFY `campaignid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `campaignid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `campaignfollow`
 --
 ALTER TABLE `campaignfollow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `podcast`
 --
 ALTER TABLE `podcast`
-  MODIFY `podcastid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `podcastid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `podcastfollow`
@@ -258,29 +286,19 @@ ALTER TABLE `podcastfollow`
 -- AUTO_INCREMENT for table `podcast_campain`
 --
 ALTER TABLE `podcast_campain`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `userfollow`
 --
 ALTER TABLE `userfollow`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `campaign`
---
-ALTER TABLE `campaign`
-  ADD CONSTRAINT `campaign_ibfk_1` FOREIGN KEY (`creator`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

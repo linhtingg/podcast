@@ -2,6 +2,15 @@
 session_start();
 error_reporting(0);
 include('helper/config.php');
+
+$creator = $_SESSION['uname'];
+$sql = "SELECT userid FROM user WHERE username=:creator;";
+$query = $dbh->prepare($sql);
+$query->bindParam(':creator', $creator, PDO::PARAM_STR);
+$query->execute();
+$users = $query->fetchAll(PDO::FETCH_OBJ);
+foreach ($users as $user) {
+    $uid=$user->userid;
 ?>
 
 <!doctype html>
@@ -40,7 +49,7 @@ include('helper/config.php');
     <main>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand me-lg-5 me-0" href="home.php">
+                <a class="navbar-brand me-lg-5 me-0" href="index.php">
                     <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
                 </a>
                 <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
@@ -202,62 +211,64 @@ include('helper/config.php');
                             <h4 class="section-title">In Progress Campaigns</h4>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                <a href="detail-podcast.php">
-                                    <img src="images/podcast/1.jpg" class="custom-block-image img-fluid"
-                                        alt="">
-                                </a>
-                            </div>
-
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="detail-podcast.php">
-                                        Vintage Show
-                                    </a>
-                                </h5>
-
-                                <div class="profile-block d-flex">
-                                    <img src="images/profile/lyly-portrait.jpg"
-                                        class="profile-block-image img-fluid" alt="">
-
-                                    <p>Elsa
-                                        <strong>Influencer</strong>
-                                    </p>
-                                </div>
-
-                                <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span>100k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-heart me-1">
-                                        <span>2.5k</span>
-                                    </a>
-
-                                    <a href="#" class="bi-chat me-1">
-                                        <span>924k</span>
+                    
+                    <?php $sql = "SELECT campaign.name, campaign.description, campaign.campaignid
+                                From campaignfollow join campaign
+                                on campaign.campaignid=campaignfollow.campaignid 
+                                where campaignfollow.userid=:uid limit 3";
+                    $query = $dbh->prepare($sql);
+                    $query->bindParam(':uid', $uid, PDO::PARAM_STR);
+                    $query->execute();
+                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+                    if ($query->rowCount() > 0) {
+                        foreach ($results as $result) { ?>
+                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                            <div class="custom-block custom-block-full">
+                                <div class="custom-block-image-wrap">
+                                    <a href="#">
+                                        <img src="images/campaign/<?php echo ($result->campaignid); ?>.jpg" class="custom-block-image img-fluid"
+                                            alt="">
                                     </a>
                                 </div>
-                            </div>
 
-                            <div class="social-share d-flex flex-column ms-auto">
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-heart"></i>
-                                </a>
+                                <div class="custom-block-info">
+                                    <h5 class="mb-2">
+                                        <a href="#">
+                                            <?php echo htmlentities ($result->name); ?>
+                                        </a>
+                                    </h5>
 
-                                <a href="#" class="badge ms-auto">
-                                    <i class="bi-bookmark"></i>
-                                </a>
+                                    <p class="mb-0"><?php echo htmlentities ($result->description); ?>;</p>
+
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-headphones me-1">
+                                            <span>100k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-heart me-1">
+                                            <span>2.5k</span>
+                                        </a>
+
+                                        <a href="#" class="bi-chat me-1">
+                                            <span>924k</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="social-share d-flex flex-column ms-auto">
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-heart"></i>
+                                    </a>
+
+                                    <a href="#" class="badge ms-auto">
+                                        <i class="bi-bookmark"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php }} ?>
 
-                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                    <!-- <div class="col-lg-4 col-12 mb-4 mb-lg-0">
                         <div class="custom-block custom-block-full">
                             <div class="custom-block-image-wrap">
                                 <a href="detail-podcast.php">
@@ -367,7 +378,7 @@ include('helper/config.php');
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -383,5 +394,5 @@ include('helper/config.php');
     <script src="js/custom.js"></script>
 
 </body>
-
 </html>
+<?php }?>

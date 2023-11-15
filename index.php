@@ -91,11 +91,11 @@ include('helper/config.php');
 
                     <div class="col-lg-12 col-12">
                         <div class="text-center mb-5 pb-2">
-                            <h1 class="text-white">Listen to all the talks</h1>
+                            <h1 class="text-white">IT用語をマスターしよう！</h1>
+                            <!-- Explore this week trending topic -->
+                            <h6 class="text-white">最新の流行トピックを探る</h6>
 
-                            <p class="text-white"><b>Nghe nè!</b> is everywhere. Every sound remind you of us.</p>
-
-                            <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start listening</a>
+                            <a href="#section_2" class="btn custom-btn smoothscroll mt-3">学習を始めましょう！</a>
                         </div>
 
                         <!-- Trending creators -->
@@ -108,14 +108,14 @@ include('helper/config.php');
                             if ($query->rowCount() > 0) {
                                 foreach ($results as $result) { ?>
                                     <div class="owl-carousel-info-wrap item">
-                                        <img src="images/profile/<?php echo strtolower($result->username);?>-portrait.jpg"
-                                            class="owl-carousel-image img-fluid" alt="">
+                                        <img src="images/topics/<?php echo $cnt;?>.png" class="owl-carousel-image img-fluid" alt="">
                                         <div class="owl-carousel-info">
-                                            <h4 class="mb-2">
-                                                <?php echo htmlentities($result->username)?>
+                                            <h5 class="mb-2">
+                                                <?php # echo htmlentities($result->username)?>
+                                                Topic's name
                                                 <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
-                                            </h4>
-                                            <span class="badge">Verified Podcaster</span>
+                                            </h5>
+                                            <span class="badge">流行</span>
                                         </div>
                                         <div class="social-share">
                                             <ul class="social-icon">
@@ -139,14 +139,13 @@ include('helper/config.php');
             </div>
         </section>
                         
-        <!-- Latest podcast section -->
+        <!-- Quizzes to take on -->
         <section class="latest-podcast-section section-padding pb-0" id="section_2">
             <div class="container">
                 <div class="row justify-content-center">
-
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Lastest podcasts</h4>
+                            <h4 class="section-title">復習クイズ</h4>
                         </div>
                     </div>
 
@@ -163,7 +162,7 @@ include('helper/config.php');
                                 <div class="custom-block-icon-wrap">
                                     <div class="section-overlay"></div>
                                     <a href="signin.php" class="custom-block-image-wrap">
-                                        <img src="images/podcast/<?php echo $result->podcastid;?>.jpg"
+                                        <img src="images/topics/<?php echo $cnt;?>.png"
                                             class="custom-block-image img-fluid" alt="">
                                         <a href="#" class="custom-block-icon">
                                             <i class="bi-play-fill"></i>
@@ -172,9 +171,7 @@ include('helper/config.php');
                                 </div>
 
                                 <div class="mt-2">
-                                    <a href="#" class="btn custom-btn">
-                                        Subscribe
-                                    </a>
+                                    <a href="#" class="btn custom-btn">受ける</a>
                                 </div>
                             </div>
 
@@ -185,7 +182,7 @@ include('helper/config.php');
                                         <?php echo htmlentities($result->duration)?> minutes
                                     </small>
 
-                                    <small><span class="badge">Campaign ↗</span></small>
+                                    <small><span class="badge">関連トピック ↗</span></small>
                                 </div>
 
                                 <h5 class="mb-2">
@@ -204,7 +201,7 @@ include('helper/config.php');
                                     </p>
                                 </div>
 
-                                <p class="mb-0"><?php echo htmlentities($result->description)?></p>
+                                <p class="mb-0"><?php # echo htmlentities($result->description)?></p>
 
                                 <div class="custom-block-bottom d-flex justify-content-between mt-3">
                                     <a href="#" class="bi-headphones me-1">
@@ -242,16 +239,16 @@ include('helper/config.php');
                 </div>
             </div>
         </section>
-        <!-- End of Latest podcast section -->
+        <!-- End of Quizzes -->
 
-        <!-- Hot topic section -->
+        <!-- Festive season topic section -->
         <section class="topics-section section-padding pb-0" id="section_3">
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Hot topics</h4>
+                            <h4 class="section-title">お祭りの季節</h4>
                         </div>
                     </div>
 
@@ -334,16 +331,16 @@ include('helper/config.php');
                 </div>
             </div>
         </section>
-        <!-- End of Hot topic section -->
+        <!-- End of Festive season topic section -->
 
-        <!-- Trending podcast section -->
+        <!-- Technoloy fields section -->
         <section class="trending-podcast-section section-padding pt-0">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-12 col-12">
+                    <div class="col-lg-12 col-12" style="padding-top: 70px;">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Trending Podcasts</h4>
+                            <h4 class="section-title">技術分野</h4>
                         </div>
                     </div>
 
@@ -516,6 +513,7 @@ include('helper/config.php');
                 </div>
             </div>
         </section>
+        <!-- End of Technoloy fields section -->
     </main>
 
     <?php include('helper/footer.php'); ?>
